@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="89dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imgTitle"
+        android:layout_width="257dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/imgLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/name_image" />
+
+    <ImageView
+        android:id="@+id/imgBckg"
+        android:layout_width="0dp"
+        android:layout_height="540dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="6dp"
+        android:alpha="0.2"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgTitle"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/login_people" />
+
+
+    <EditText
+        android:id="@+id/usernameView"
+        android:layout_width="294dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="230dp"
+        android:autofillHints=""
+        android:background="#D6D7D7"
+        android:paddingLeft="4dp"
+        android:ems="10"
+        android:hint="@string/username_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/passowrdView"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:background="#D6D7D7"
+        android:ems="10"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:paddingLeft="4dp"
+        android:textColorHint="#FF178E7E"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/usernameView"
+        app:layout_constraintStart_toStartOf="@+id/usernameView"
+        app:layout_constraintTop_toBottomOf="@+id/usernameView" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#D6D7D7"
+        android:onClick="onLoginBtnClick"
+        android:text="@string/loginbutton"
+        android:textColor="#FF178E7E"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/passowrdView"
+        app:layout_constraintStart_toStartOf="@+id/passowrdView"
+        app:layout_constraintTop_toBottomOf="@+id/passowrdView" />
+
+    <CheckBox
+        android:id="@+id/remCred"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:checked="false"
+        android:text="@string/credcheckbox"
+        android:textColor="#FF178E7E"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+        app:layout_constraintStart_toStartOf="@+id/loginBtn"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+    <TextView
+        android:id="@+id/createNewAccView"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:onClick="onNewAccCreateClick"
+        android:text="@string/newaccountcreateview"
+        android:textColor="#FF178E7E"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/remCred"
+        app:layout_constraintStart_toStartOf="@+id/remCred"
+        app:layout_constraintTop_toBottomOf="@+id/remCred" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:indeterminate="true"
+        android:translationZ="2dp"
+        android:visibility="gone"
+        android:indeterminateTint="#FF178E7E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

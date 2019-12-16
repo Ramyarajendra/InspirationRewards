@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ActivityCreate">
+
+    <ImageView
+        android:id="@+id/createUserPhoto"
+        android:layout_width="152dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:onClick="captureImage"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_photo" />
+
+    <EditText
+        android:id="@+id/createUname"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/createUsr_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/createUserPhoto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/createPass"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/createPwd_hint"
+        android:inputType="textPassword"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="@+id/createUname"
+        app:layout_constraintStart_toStartOf="@+id/createUname"
+        app:layout_constraintTop_toBottomOf="@+id/createUname" />
+
+    <CheckBox
+        android:id="@+id/createChkBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#FF178E7E"
+        android:text="@string/createAdmn_hint"
+        app:layout_constraintEnd_toEndOf="@+id/createPass"
+        app:layout_constraintStart_toStartOf="@+id/createPass"
+        app:layout_constraintTop_toBottomOf="@+id/createPass" />
+    <EditText
+        android:id="@+id/createFirstName"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/createFistName_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="@+id/createPass"
+        app:layout_constraintStart_toStartOf="@+id/createPass"
+        app:layout_constraintTop_toBottomOf="@+id/createChkBox" />
+
+    <EditText
+        android:id="@+id/createLastName"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/createLastName_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="@+id/createFirstName"
+        app:layout_constraintStart_toStartOf="@+id/createFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/createFirstName" />
+
+    <TextView
+        android:id="@+id/createDptView"
+        android:layout_width="119dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/createDept_lbl"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/createUserPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/createUserPhoto" />
+
+    <TextView
+        android:id="@+id/createPosView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/createPosition_lbl"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/createDptView"
+        app:layout_constraintStart_toStartOf="@+id/createDptView"
+        app:layout_constraintTop_toBottomOf="@+id/createDptView" />
+
+    <EditText
+        android:id="@+id/createDept"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:ems="10"
+        android:hint="@string/createDpt_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        android:background="#D7D7D6"
+        app:layout_constraintBaseline_toBaselineOf="@+id/createDptView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/createDptView" />
+
+    <EditText
+        android:id="@+id/createPos"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/createPos_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="@+id/createDept"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/createDept"
+        app:layout_constraintTop_toBottomOf="@+id/createDept" />
+
+    <TextView
+        android:id="@+id/createStoryView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/createStory_lbl"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/createPosView"
+        app:layout_constraintStart_toStartOf="@+id/createPosView"
+        app:layout_constraintTop_toBottomOf="@+id/createPosView" />
+
+    <EditText
+        android:id="@+id/createStory"
+        android:layout_width="387dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/createStory_hint"
+        android:inputType="textMultiLine"
+        android:maxLength="360"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/availChars"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/createStoryView"
+        app:layout_constraintEnd_toEndOf="@+id/createPos"
+        app:layout_constraintStart_toStartOf="@+id/createPos"
+        app:layout_constraintTop_toBottomOf="@+id/createPos" />
+
+    <ImageView
+        android:id="@+id/createImageAdd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/createUserPhoto"
+        app:layout_constraintEnd_toEndOf="@+id/createUserPhoto"
+        app:layout_constraintStart_toStartOf="@+id/createUserPhoto"
+        app:layout_constraintTop_toTopOf="@+id/createUserPhoto"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+</androidx.constraintlayout.widget.ConstraintLayout>

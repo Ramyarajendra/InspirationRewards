@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Rewards</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="loginbutton">LOGIN</string>
+    <string name="credcheckbox">Remember my credentials</string>
+    <string name="newaccountcreateview">Tap here to create new account</string>
+    <string name="prefFile">MY_PREF_FILE</string>
+    <string name="pref_user">U_PREF</string>
+    <string name="pref_pass">PASS_PREF</string>
+    <string name="pref_check">CHECK_PREF</string>
+    <string name="createUsr_hint">Select Username</string>
+    <string name="createPwd_hint">Select Password</string>
+    <string name="createAdmn_hint">Administrator User</string>
+    <string name="createFistName_hint">Enter First Name</string>
+    <string name="createLastName_hint">Enter Last Name</string>
+    <string name="createDpt_hint">Select Department</string>
+    <string name="createPos_hint">Enter your position</string>
+    <string name="createStory_hint">Tell us something about yourself!</string>
+    <string name="createDept_lbl">Department:</string>
+    <string name="createPosition_lbl">Position:</string>
+    <string name="createStory_lbl">Your Story:</string>
+    <string name="userProfilePtAw_view">Points Awarded:</string>
+    <string name="userProfileDept_view">Department:</string>
+    <string name="userProfilePosition_view">Position:</string>
+    <string name="userProfilePtAva_view">Points to Award:</string>
+    <string name="rewardProfilePts_view">Reward points to send:</string>
+    <string name="rewardProfileComment_view">Comment:</string>
+
+</resources>

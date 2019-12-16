@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".EditActivity">
+
+    <ImageView
+        android:id="@+id/editpic"
+        android:layout_width="152dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:onClick="captureImageEditActivity"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_photo" />
+
+    <EditText
+        android:id="@+id/editUname"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="#D7D7D6"
+
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="false"
+
+        android:focusableInTouchMode="false"
+        android:hint="@string/createUsr_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editpic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editpwd"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:textColorHint="#FF178E7E"
+        android:hint="@string/createPwd_hint"
+        android:inputType="textPassword"
+        android:background="#D7D7D6"
+        app:layout_constraintEnd_toEndOf="@+id/editUname"
+        app:layout_constraintStart_toStartOf="@+id/editUname"
+        app:layout_constraintTop_toBottomOf="@+id/editUname" />
+
+    <CheckBox
+        android:id="@+id/editChkBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/createAdmn_hint"
+        android:textColor="#FF178E7E"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editpwd"
+        app:layout_constraintStart_toStartOf="@+id/editpwd"
+        app:layout_constraintTop_toBottomOf="@+id/editpwd" />
+    <EditText
+        android:id="@+id/editFirstName"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/createFistName_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="@+id/editpwd"
+        app:layout_constraintStart_toStartOf="@+id/editpwd"
+        app:layout_constraintTop_toBottomOf="@+id/editChkBox" />
+
+    <EditText
+        android:id="@+id/editLastName"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/createLastName_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="@+id/editFirstName"
+        app:layout_constraintStart_toStartOf="@+id/editFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstName" />
+
+    <TextView
+        android:id="@+id/editDpt"
+        android:layout_width="119dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/createDept_lbl"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editpic"
+        app:layout_constraintTop_toBottomOf="@+id/editpic" />
+
+    <TextView
+        android:id="@+id/editPosView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/createPosition_lbl"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editDpt"
+        app:layout_constraintStart_toStartOf="@+id/editDpt"
+        app:layout_constraintTop_toBottomOf="@+id/editDpt" />
+
+    <EditText
+        android:id="@+id/editDept"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:ems="10"
+        android:hint="@string/createDpt_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        android:background="#D7D7D6"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editDpt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editDpt" />
+
+    <EditText
+        android:id="@+id/editPos"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/createPos_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="@+id/editDept"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editDept"
+        app:layout_constraintTop_toBottomOf="@+id/editDept" />
+
+    <TextView
+        android:id="@+id/editStoryView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/createStory_lbl"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editPosView"
+        app:layout_constraintStart_toStartOf="@+id/editPosView"
+        app:layout_constraintTop_toBottomOf="@+id/editPosView" />
+
+    <EditText
+        android:id="@+id/editStory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/createStory_hint"
+        android:inputType="textMultiLine"
+        android:maxLength="360"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStoryView" />
+
+    <TextView
+        android:id="@+id/editAvailChars"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editStoryView"
+        app:layout_constraintEnd_toEndOf="@+id/editPos"
+        app:layout_constraintStart_toStartOf="@+id/editPos"
+        app:layout_constraintTop_toBottomOf="@+id/editPos" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editpic"
+        app:layout_constraintEnd_toEndOf="@+id/editpic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editpic"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+</androidx.constraintlayout.widget.ConstraintLayout>
